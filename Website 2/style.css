@@ -1,0 +1,136 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+#main {
+  height: 100%;
+  width: 100%;
+}
+
+#nav {
+  height: 100px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* border: 1px solid; */
+  padding: 0px 30px;
+}
+
+#nav-part1,
+#nav-part2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#nav h3,
+i {
+  font-size: 16px;
+  font-weight: 500;
+  border: 1px solid black;
+  border-radius: 50px;
+  padding: 5px 10px;
+}
+
+#nav-part2 h1 {
+  text-transform: uppercase;
+  font-size: 22px;
+}
+
+#nav-part2 i {
+  color: white;
+  background-color: orangered;
+  border-radius: 50%;
+  border: none;
+  height: 32px;
+  padding: 7px;
+  width: 32px;
+  font-size: 19px;
+}
+
+#nav button {
+  padding: 7px 12px;
+  border-radius: 50px;
+  border: 1px solid #000;
+  font-size: 16px;
+  background-color: white;
+  cursor: pointer;
+}
+
+#nav #btn2 {
+  background-color: orangered;
+  color: #fff;
+  border: none;
+}
+
+#main > h1 {
+  text-transform: uppercase;
+  font-size: 150px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  text-align: center;
+  font-weight: 600;
+}
+
+img {
+  height: 400px;
+  width: 320px;
+  object-fit: cover;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 20px;
+}
+
+#img0 {
+  z-index: 100;
+}
+
+#img1 {
+  transform: translate(-50%, -50%) rotate(-30deg);
+}
+#img2 {
+  transform: translate(-50%, -50%) rotate(-20deg);
+}
+#img3 {
+  transform: translate(-50%, -50%) rotate(-10deg);
+}
+
+#btm-left {
+  position: absolute;
+  left: 2%;
+  bottom: 5%;
+  font-size: 17px;
+}
+
+span {
+  position: absolute;
+  bottom: 5%;
+  right: 2%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  flex-direction: column;
+  font-size: 17px;
+}
+
+span i {
+  border: none;
+  font-size: 22px;
+  font-weight: 300;
+}

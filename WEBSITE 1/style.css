@@ -1,0 +1,141 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: rgb(250, 246, 246);
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+#main {
+  height: 100%;
+  width: 100%;
+}
+
+#nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 40px 50px;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+#nav-part1{
+    width: 45%;
+    display: flex;
+    justify-content: space-between;
+}
+
+#nav-part2{
+    width: 35%;
+    display: flex;
+    justify-content: space-between;
+}
+
+#content{
+    padding: 40px 50px;
+    margin-top: 70px;
+}
+
+#content h3{
+    font-size: 23px;
+    font-weight: 700;
+}
+
+#content h1{
+    font-size: 150px;
+    font-weight: 400;
+    line-height: 140px;
+    letter-spacing: -10px;
+    padding-top: 20px;
+}
+
+
+#case{
+    padding: 40px 50px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 150px;
+    font-size: 25px;
+    font-weight: 300;
+}
+
+#right{
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+#projects{
+    padding: 40px 50px;
+    /* margin-top: 10px; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px;
+}
+
+.elem{
+    width: 50%;
+    height: 500px;
+}
+
+.elem-img{
+    height: 770px;
+    background-color: rgb(199, 240, 238);
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    border-radius: 20px;
+}
+
+#img1{
+ background-image: url("https://i.fbcd.co/products/resized/resized-750-500/2110-yellow-topaz-mainpreview-d396e6c40d362b13a9668c7801b5bb14e27e7718d202b28cdda800b6b19cb743.webp");
+}
+
+#img2{
+    background-image: url("https://play-lh.googleusercontent.com/gLptGfampwVFdip9JSAbRpu0sdd8HXzzKcE_8YB5aW-Fr8Dz29aFJqt8vKwrbrR63Q=w2560-h1440-rw");
+}
+
+.bottom{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 40px;
+    padding-top: 40px;
+}
+
+.btm-left{
+    display: flex;
+    flex-direction: column;
+}
+
+.btm-left h2{
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.btm-left h4{
+    font-size: 17px;
+    font-weight: 400;
+}
+
+.btm-right i{
+    font-size: 27px;
+    border: 1px solid;
+    border-radius: 50px;
+    padding: 7px 30px;
+    cursor: pointer;
+}
+
+.btm-right i:hover{
+    color: white;
+    background-color: black;
+} 
+
