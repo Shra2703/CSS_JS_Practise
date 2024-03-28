@@ -37,6 +37,8 @@ let arr = [
 ];
 
 let clutter = "";
+
+// showng the card on the screen dynamically
 function showTheCards() {
   arr.forEach((obj) => {
     clutter += `<div class="box">
@@ -47,13 +49,35 @@ function showTheCards() {
   document.querySelector(".container").innerHTML = clutter;
 }
 
+// searching functionality in the search bar
 function handleSearchInput() {
-  document.querySelector("#searchinput").addEventListener("focus", () => {
+  let input = document.querySelector("#searchinput");
+
+  input.addEventListener("focus", () => {
     document.querySelector(".overlay").style.display = "block";
   });
 
-  document.querySelector("#searchinput").addEventListener("blur", () => {
+  input.addEventListener("blur", () => {
     document.querySelector(".overlay").style.display = "none";
+  });
+
+  // filtering the word in the array
+  input.addEventListener("input", function () {
+    let cluttered = "";
+    const fillterArray = arr.filter((obj) =>
+      obj.name.toLowerCase().startsWith(input.value)
+    );
+    console.log(fillterArray);
+
+    fillterArray.forEach((obj) => {
+      cluttered += `<div class="res flex px-8 py-3">
+          <i class="ri-search-line font-semibold mr-5"></i>
+          <h3 class="font-semibold">${obj.name}</h3>
+        </div>`;
+    });
+
+    document.querySelector(".searchdata").style.display = "block";
+    document.querySelector(".searchdata").innerHTML = cluttered;
   });
 }
 
