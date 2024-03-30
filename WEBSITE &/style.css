@@ -1,0 +1,86 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  color: white;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+#main {
+  background-color: #111;
+  height: 85%;
+  width: 100%;
+  display: flex;
+  padding: 3vw 5vw;
+}
+
+#left {
+  height: 100%;
+  width: 45%;
+  background-color: #333;
+}
+
+#right {
+  height: 100%;
+  width: 55%;
+  padding: 0 3vw;
+}
+
+#right > h3 {
+  font-size: 40px;
+}
+
+#all-songs {
+  height: 85%;
+  /* background-color: red; */
+  margin-top: 20px;
+}
+
+.song-card {
+  border-top: 1px solid #dadada;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 10px;
+}
+
+.song-card:hover {
+  background-color: #444;
+  cursor: pointer;
+}
+
+.part1 {
+  display: flex;
+  align-items: center;
+}
+
+.song-card img {
+  height: 45px;
+  width: 45px;
+  margin-right: 10px;
+}
+
+.song-card:nth-last-child(1) {
+  border-bottom: 1px solid #dadada;
+}
+
+.part1 h3 {
+  font-size: 20px;
+}
+
+.song-card h6 {
+  font-size: 15px;
+}
+
+
+#player{
+    height: 15%;
+    width: 100%;
+    background-color: #000;
+}
