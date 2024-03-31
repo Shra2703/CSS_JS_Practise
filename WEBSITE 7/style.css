@@ -24,6 +24,9 @@ body {
   height: 100%;
   width: 45%;
   background-color: #333;
+  background-image: url(https://m.media-amazon.com/images/M/MV5BN2Y0YjJkMTctNjNmMC00MDkyLTkzZDktMWZmNTdmN2YyNWNmXkEyXkFqcGdeQXVyMTA5NzIyMDY5._V1_.jpg);
+  background-position: center;
+  background-size: cover;
 }
 
 #right {
@@ -58,6 +61,7 @@ body {
 .part1 {
   display: flex;
   align-items: center;
+  pointer-events: none;
 }
 
 .song-card img {
@@ -78,9 +82,30 @@ body {
   font-size: 15px;
 }
 
-
-#player{
-    height: 15%;
-    width: 100%;
-    background-color: #000;
+#player {
+  height: 15%;
+  width: 100%;
+  background-color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
 }
+
+#player h3 {
+  border-radius: 50%;
+  padding: 10px;
+  background-color: rgb(69, 68, 68);
+  color: #111;
+  cursor: pointer;
+}
+
+#player i{
+  font-size: 22px;
+}
+
+#player h3:active{
+  scale: 0.9;
+}
+
+
