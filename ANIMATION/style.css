@@ -1,0 +1,105 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+#box {
+  height: 300px;
+  width: 300px;
+  background-color: aqua;
+  position: absolute;
+  /* animation-name: move; */
+  animation-name: anime;
+  animation-duration: 3s;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+}
+
+/* making the animation */
+@keyframes move {
+  /* initial position */
+  from {
+    left: 0;
+    background-color: aqua;
+  }
+  /* final position */
+  to {
+    left: 70%;
+    background-color: aquamarine;
+  }
+}
+
+@keyframes anime {
+  0% {
+    left: 0;
+    top: 0;
+    bottom: 0;
+    background-color: aqua;
+  }
+  25% {
+    left: 70%;
+    top: 0;
+    background-color: blue;
+  }
+  50% {
+    left: 70%;
+    top: 70%;
+    background-color: blueviolet;
+  }
+  100% {
+    left: 0%;
+    top: 70%;
+    bottom: 70%;
+    background-color: blueviolet;
+  }
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  font-size: 100px;
+  position: relative;
+  font-weight: 800;
+}
+
+h1::after {
+  content: "";
+  width: 0%;
+  height: 10px;
+  background-color: black;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+}
+
+h1:hover::after{
+    animation-name: lineanime;
+    animation-duration: 2s;
+}
+@keyframes lineanime {
+  0% {
+    width: 0%;
+    left: 0;
+  }
+  50% {
+    width: 100%;
+    left: 0;
+  }
+  100% {
+    width: 0;
+    left: 100%;
+  }
+}
