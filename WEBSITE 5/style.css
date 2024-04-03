@@ -11,16 +11,19 @@ body {
   width: 100%;
 }
 
+/* nav part css */
 nav {
   position: fixed;
   background-color: #111;
   color: white;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
   width: 100%;
   padding: 2vw 6vw;
-  height: 18vh;
+  height: 12vh;
+  z-index: 10;
+  /* border: 1px solid salmon; */
   /* margin-top: 15px; */
 }
 
@@ -31,51 +34,42 @@ nav h1 {
 nav .nav-elems {
   text-transform: uppercase;
   display: flex;
+  /* align-items: flex-start;
+  justify-content: center; */
   gap: 1.2vw;
+  margin-top: 0.8vw;
+  position: relative;
+  z-index: 10;
 }
 
-nav .nav-elems h5 {
+nav .nav-elems h4 {
   font-size: 0.9vw;
   font-weight: 50;
+  cursor: pointer;
 }
 
-#nav-bottom {
-  position: absolute;
-  height: 0%;
-  width: 80%;
-  bottom: 0%;
+nav .nav-elems h4:hover {
+  color: #807e7e;
+}
+
+nav .nav-elem h4 {
+  margin-bottom: 30px;
+}
+
+nav .nav-elem h5 {
+  margin-bottom: 15px;
+  text-transform: capitalize;
+  font-size: 0.83vw;
   /* background-color: #0da34e; */
-  border-bottom: 1px solid #dadada;
-  transition: all ease 0.67s;
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  padding: 2vw 15vw;
-  padding-left: 19vw;
 
-  /* justify-content: center;
-  gap: 1.4vw; */
+  overflow: hidden;
+  display: none;
 }
 
-.bottom-div {
-  margin-left: -39px;
-  padding-top: 1vw;
-}
-
-.bottom-div h5 {
-  margin-bottom: 0.4vw;
-}
-
-.bottom-div span {
-  font-size: 0.8vw;
+nav .nav-elem h5 span {
+  font-weight: 50;
   display: inline-block;
-  opacity: 0;
-}
-
-nav:hover #nav-bottom {
-  height: 150%;
-  bottom: -150%;
-  background-color: #111;
+  /* opacity: 0; */
 }
 
 /* button part of nav element */
@@ -98,6 +92,19 @@ nav button svg {
   height: 1vw;
 }
 
+/* nav bottom */
+#nav-bottom {
+  background-color: #111;
+  width: 88%;
+  height: 0vh;
+  /* height: 26vh; */
+  border-bottom: 1px solid #dadada;
+  position: absolute;
+  top: 100%;
+  /* margin-top: 10px; */
+  z-index: 8;
+}
+
 #page1 {
   height: 100vh;
   width: 100%;
@@ -109,11 +116,17 @@ nav button svg {
   align-items: center;
 }
 
+.forGap {
+  margin-top: 15vh;
+  margin-bottom: 10vh;
+}
+
 #page1 h1 {
-  font-size: 8vw;
+  font-size: 8.3vw;
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: -4px;
+  line-height: 130px;
 }
 
 #page1 h1 svg {
@@ -147,6 +160,61 @@ nav button svg {
   font-size: 1vw;
   margin-top: 5px;
   color: #e1dcdc;
+}
+
+#moving-div {
+  /* margin-top: 10vh; */
+  position: absolute;
+  bottom: -16%;
+  /* background-color: #0da34e; */
+  width: 55%;
+  white-space: nowrap;
+  overflow: hidden;
+  padding: 2vw;
+}
+
+#moving-div .move {
+  display: inline-block;
+  animation-name: mobe;
+  animation-duration: 18s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+#moving-div .move img {
+  margin: 0 1.8vw;
+  /* height: 3.5vh; */
+}
+
+@keyframes mobe {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+#blur-left {
+  height: 100%;
+  background: linear-gradient(to right, #111, transparent);
+  width: 20%;
+  position: absolute;
+  left: 0;
+  z-index: 2;
+
+  top: 0;
+}
+
+#blur-right {
+  height: 100%;
+  background-color: #0da34e;
+  width: 20%;
+  position: absolute;
+  right: 0;
+  z-index: 0;
+  top: 0;
+  background: linear-gradient(to right, transparent, #111);
 }
 
 #page2 {
